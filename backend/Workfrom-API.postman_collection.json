@@ -1962,13 +1962,39 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Dummy\",\r\n    \"city\" : \"Dummy\",\r\n    \"address\": \"Dummy\",\r\n    \"description\" : \"This is Dummy\",\r\n    \"location_url\" : \"Dummy\",\r\n    \"image\" : \"Dummy.png\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "MDEAN TOWER",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Medan",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Clapham Co-working & Event Space.\nRuko Centre Point Medan.\nJalan Timor Blok G No. III/IV 2nd Floor,\nGang Buntu, Medan Timur, Medan City,\nNorth Sumatra 20231",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Event Space paid tribute to the Clapham Sect who was instrumental in eradicating modern slavery in England.",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Bobby/Downloads/building.jpg"
+								},
+								{
+									"key": "location_url",
+									"value": "https://www.google.com/maps?ll=3.592618,98.681436&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=2021951983991219041",
+									"type": "text"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{localhost}}/locations",
@@ -1996,12 +2022,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{localhost}}/locations",
+									"raw": "{{localhost}}/nearmeFacility/",
 									"host": [
 										"{{localhost}}"
 									],
 									"path": [
-										"locations"
+										"nearmeFacility",
+										""
 									]
 								}
 							},
@@ -2077,13 +2104,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{localhost}}/locations/",
+									"raw": "{{localhost}}/locations",
 									"host": [
 										"{{localhost}}"
 									],
 									"path": [
-										"locations",
-										""
+										"locations"
 									]
 								}
 							},
@@ -2113,15 +2139,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "981"
+									"value": "697"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"3d5-eKG0L25VzqCUoK8qFSRkHpUKTDo\""
+									"value": "W/\"2b9-SEFCdu/xSrjqIuchkxhXIEJgP+A\""
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 11 Oct 2023 04:26:26 GMT"
+									"value": "Wed, 11 Oct 2023 09:17:17 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2133,7 +2159,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"building_id\": \"c1f271f8-b5db-4c94-95d2-3138310cab48\",\n        \"name\": \" Yafurni Working Space\",\n        \"city\": \"Medan\",\n        \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\",\n        \"description\": \"This is description\",\n        \"location_url\": \"https://www.google.com/maps/place/Yafurni+Working+Space/@3.5838582,98.6631465,18z/data=!4m6!3m5!1s0x30313119284c93e1:0x37957c852bec59d7!8m2!3d3.583322!4d98.6615196!16s%2Fg%2F11tnh_khdk?coh=164777&entry=tt&shorturl=1\",\n        \"image\": \"image.png\",\n        \"userId\": 2,\n        \"createdAt\": \"2023-10-11T04:23:09.000Z\",\n        \"updatedAt\": \"2023-10-11T04:23:09.000Z\",\n        \"user\": {\n            \"id\": 2,\n            \"uuid\": \"9196b422-3d28-474f-8282-bc074434af3a\",\n            \"name\": \"Rafael Sembiring\",\n            \"email\": \"user@email.com\",\n            \"password\": \"$argon2id$v=19$m=65536,t=3,p=4$coW8ygku17YXWkIJWuEWrQ$HZdgZP9QZvqeV+vjg52nh7yVnQpNvl3dYf/Lyj7uYog\",\n            \"role\": \"user\",\n            \"createdAt\": \"2023-10-10T14:37:40.000Z\",\n            \"updatedAt\": \"2023-10-10T14:37:40.000Z\"\n        }\n    }\n]"
+							"body": "[\n    {\n        \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n        \"name\": \"Clapham\",\n        \"city\": \"Medan\",\n        \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\",\n        \"description\": \"Event Space paid tribute to the Clapham Sect who was instrumental in eradicating modern slavery in England.\",\n        \"image\": \"26fd9710acd3ef804ab41f2fc906c809.jpg\",\n        \"url\": \"http://localhost:3000/images/26fd9710acd3ef804ab41f2fc906c809.jpg\",\n        \"location_url\": \"https://www.google.com/maps?ll=3.592618,98.681436&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=2021951983991219041\",\n        \"user\": {\n            \"name\": \"Rafael Sembiring\",\n            \"email\": \"user@email.com\"\n        }\n    }\n]"
 						}
 					]
 				},
@@ -2160,13 +2186,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{localhost}}/locations/c1f271f8-b5db-4c94-95d2-3138310cab48",
+									"raw": "{{localhost}}/locations/aa965d2a-e4ab-4d87-9763-0c108aed49df",
 									"host": [
 										"{{localhost}}"
 									],
 									"path": [
 										"locations",
-										"c1f271f8-b5db-4c94-95d2-3138310cab48"
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
 									]
 								}
 							},
@@ -2196,15 +2222,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "627"
+									"value": "621"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"273-HGlFwDim7rsGbHxvE38+FKyCIMs\""
+									"value": "W/\"26d-B7GuUFC2ufcz1no5eh4hQRz9INo\""
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 11 Oct 2023 04:37:11 GMT"
+									"value": "Wed, 11 Oct 2023 09:18:20 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2216,7 +2242,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"building_id\": \"c1f271f8-b5db-4c94-95d2-3138310cab48\",\n    \"name\": \" Yafurni Working Space\",\n    \"city\": \"Medan\",\n    \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\",\n    \"description\": \"This is description\",\n    \"location_url\": \"https://www.google.com/maps/place/Yafurni+Working+Space/@3.5838582,98.6631465,18z/data=!4m6!3m5!1s0x30313119284c93e1:0x37957c852bec59d7!8m2!3d3.583322!4d98.6615196!16s%2Fg%2F11tnh_khdk?coh=164777&entry=tt&shorturl=1\",\n    \"image\": \"image.png\",\n    \"user\": {\n        \"name\": \"Rafael Sembiring\",\n        \"email\": \"user@email.com\"\n    }\n}"
+							"body": "{\n    \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n    \"name\": \"Clapham\",\n    \"city\": \"Medan\",\n    \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\",\n    \"description\": \"Event Space paid tribute to the Clapham Sect who was instrumental in eradicating modern slavery in England.\",\n    \"location_url\": \"https://www.google.com/maps?ll=3.592618,98.681436&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=2021951983991219041\",\n    \"image\": \"26fd9710acd3ef804ab41f2fc906c809.jpg\",\n    \"user\": {\n        \"name\": \"Rafael Sembiring\",\n        \"email\": \"user@email.com\"\n    }\n}"
 						}
 					]
 				},
@@ -2227,7 +2253,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Not Dummy Anymore\",\r\n    \"city\" : \"Not Dummy Anymore\",\r\n    \"address\": \"Dummy\",\r\n    \"description\" : \"This is Dummy\",\r\n    \"location_url\" : \"Dummy\",\r\n    \"image\" : \"Dummy.png\"\r\n}",
+							"raw": "{\r\n    \"name\":\"Maniac Tower\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2235,13 +2261,504 @@
 							}
 						},
 						"url": {
-							"raw": "{{localhost}}/locations/c1f271f8-b5db-4c94-95d2-3138310cab48",
+							"raw": "{{localhost}}/locations/aa965d2a-e4ab-4d87-9763-0c108aed49df",
 							"host": [
 								"{{localhost}}"
 							],
 							"path": [
 								"locations",
-								"c1f271f8-b5db-4c94-95d2-3138310cab48"
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Tower",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Medan",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Clapham Co-working & Event Space.\nRuko Centre Point Medan.\nJalan Timor Blok G No. III/IV 2nd Floor,\nGang Buntu, Medan Timur, Medan City,\nNorth Sumatra 20231",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Event Space paid tribute to the Clapham Sect who was instrumental in eradicating modern slavery in England.",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "location_url",
+											"value": "https://www.google.com/maps?ll=3.592618,98.681436&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=2021951983991219041",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/locations/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"locations",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-3Jhzfx6+B//iLfQjoDeFTNeZ+Z8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 09:37:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lokasi berhasil di Update\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/locations/371a2e38-603c-4176-83f1-37ab65ceb777",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"locations",
+								"371a2e38-603c-4176-83f1-37ab65ceb777"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/locations/371a2e38-603c-4176-83f1-37ab65ceb777",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"locations",
+										"371a2e38-603c-4176-83f1-37ab65ceb777"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-b/4h+NadwHrEGJ0Aa7qGRdCEeN0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 09:46:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lokasi berhasil di hapus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "NearMe",
+			"item": [
+				{
+					"name": "Create NearMeFacilities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\" : \"Food\",\r\n    \"name\" : \"McDonalds\",\r\n    \"range\" : \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"nearmeFacility",
+								"40198421-7f7a-47a9-8615-aac9391d1bad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\" : \"Transportation\",\r\n    \"name\" : \"Taxi Online\",\r\n    \"range\" : \"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"nearmeFacility",
+										"40198421-7f7a-47a9-8615-aac9391d1bad"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-EvXzDg9LzoaOVf3Nv/g47aGDMpg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 06:42:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"NearbyFacility berhasil ditambahkan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get NearMeFacilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"nearmeFacility",
+								"40198421-7f7a-47a9-8615-aac9391d1bad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"nearmeFacility",
+										"40198421-7f7a-47a9-8615-aac9391d1bad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-IrBRn4KHa7QJL53mOsTy3VaRJmM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 06:46:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"Transportation\",\n        \"name\": \"Taxi Online\",\n        \"range\": 2,\n        \"location\": {\n            \"building_id\": \"40198421-7f7a-47a9-8615-aac9391d1bad\",\n            \"name\": \" Yafurni Working Space\",\n            \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single NearMeFacilites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"nearmeFacility",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"nearmeFacility",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-iRbg/GXXUaGrSJ+XtvXf0G7FKdI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 06:48:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"category\": \"Transportation\",\n    \"name\": \"Taxi Online\",\n    \"range\": 2,\n    \"location\": {\n        \"building_id\": \"40198421-7f7a-47a9-8615-aac9391d1bad\",\n        \"name\": \" Yafurni Working Space\",\n        \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update NearMeFacilities",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"KFC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"nearmeFacility",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"2"
 							]
 						}
 					},
@@ -2253,7 +2770,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\":\"Not Dummy Anymore\",\r\n    \"city\" : \"Dummy\",\r\n    \"address\": \"Dummy\",\r\n    \"description\" : \"This is Dummy\",\r\n    \"location_url\" : \"Dummy\",\r\n    \"image\" : \"Dummy.png\"\r\n}",
+									"raw": "{\r\n    \"name\" : \"KFC\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2261,13 +2778,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{localhost}}/locations/c1f271f8-b5db-4c94-95d2-3138310cab48",
+									"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/2",
 									"host": [
 										"{{localhost}}"
 									],
 									"path": [
-										"locations",
-										"c1f271f8-b5db-4c94-95d2-3138310cab48"
+										"nearmeFacility",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"2"
 									]
 								}
 							},
@@ -2297,15 +2815,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "34"
+									"value": "46"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"22-WzICsPs9BM0ZWHqmZxN0FnjTdLc\""
+									"value": "W/\"2e-xXNFD0Xbu+p9c74VQReEEyiKRWE\""
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 11 Oct 2023 04:42:00 GMT"
+									"value": "Wed, 11 Oct 2023 07:05:05 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2317,23 +2835,24 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"msg\": \"Lokasi berhasil diupdate\"\n}"
+							"body": "{\n    \"message\": \"NearMeFacility berhasil diupdate\"\n}"
 						}
 					]
 				},
 				{
-					"name": "Delete Location",
+					"name": "Delete NearMeFacilites",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{localhost}}/locations/065543c4-addc-49a6-92b2-5a246a6097f9",
+							"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/2",
 							"host": [
 								"{{localhost}}"
 							],
 							"path": [
-								"locations",
-								"065543c4-addc-49a6-92b2-5a246a6097f9"
+								"nearmeFacility",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"2"
 							]
 						}
 					},
@@ -2344,13 +2863,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{localhost}}/locations/065543c4-addc-49a6-92b2-5a246a6097f9",
+									"raw": "{{localhost}}/nearmeFacility/40198421-7f7a-47a9-8615-aac9391d1bad/2",
 									"host": [
 										"{{localhost}}"
 									],
 									"path": [
-										"locations",
-										"065543c4-addc-49a6-92b2-5a246a6097f9"
+										"nearmeFacility",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"2"
 									]
 								}
 							},
@@ -2380,15 +2900,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "33"
+									"value": "45"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"21-XF5S6pm8tkxjYOv1xpaVK7zvpoU\""
+									"value": "W/\"2d-A5wR1D+/3JPfaC2pmMS4D8vl0y0\""
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 11 Oct 2023 04:50:01 GMT"
+									"value": "Wed, 11 Oct 2023 07:07:50 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2400,7 +2920,1933 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"msg\": \"Lokasi berhasil dihapus\"\n}"
+							"body": "{\n    \"message\": \"NearMeFacility berhasil dihapus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pricing",
+			"item": [
+				{
+					"name": "Create Pricing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"YAFURNI Working Space 4th Floor\",\r\n    \"description\" : \"Tempat nyaman\",\r\n    \"price\" : 120000,\r\n    \"pax\" : \"month\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"pricing",
+								"40198421-7f7a-47a9-8615-aac9391d1bad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"YAFURNI Working Space 4th Floor\",\r\n    \"description\" : \"Tempat nyaman\",\r\n    \"price\" : 120000,\r\n    \"pax\" : \"month\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"pricing",
+										"40198421-7f7a-47a9-8615-aac9391d1bad"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-KGcxhCIBnD7Eqhyr8snaRJF0qQ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 07:39:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pricing berhasil ditambahkan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Pricing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"pricing",
+								"40198421-7f7a-47a9-8615-aac9391d1bad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"pricing",
+										"40198421-7f7a-47a9-8615-aac9391d1bad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "769"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"301-LK1oE9wU1ZeiYMVrIYBaZBhpP3Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 07:40:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"YAFURNI Working Space 4th Floor\",\n        \"description\": \"Tempat nyaman\",\n        \"price\": 120000,\n        \"pax\": \"month\",\n        \"location\": {\n            \"building_id\": \"40198421-7f7a-47a9-8615-aac9391d1bad\",\n            \"name\": \" Yafurni Working Space\",\n            \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"YAFURNI Working Space 4th Floor\",\n        \"description\": \"Tempat nyaman\",\n        \"price\": 120000,\n        \"pax\": \"month\",\n        \"location\": {\n            \"building_id\": \"40198421-7f7a-47a9-8615-aac9391d1bad\",\n            \"name\": \" Yafurni Working Space\",\n            \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Pricing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"pricing",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"pricing",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17f-qntq0tW/ZHMtX6F3VKb1tTXytP8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 07:41:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"YAFURNI Working Space 4th Floor\",\n    \"description\": \"Tempat nyaman\",\n    \"price\": 120000,\n    \"pax\": \"month\",\n    \"location\": {\n        \"building_id\": \"40198421-7f7a-47a9-8615-aac9391d1bad\",\n        \"name\": \" Yafurni Working Space\",\n        \"address\": \"YAFURNI Working Space 4th Floor, Plaza Furniture Yafurni, JL Iskandar Muda No.7, Petisah Hulu, Medan City, Petisah Hulu, Medan Baru, Medan City, North Sumatra 20153\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Pricing",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"YAFURNI Working Space 2th Floor\",\r\n    \"description\" : \"Tempat nyaman dan dekat dengan lantai 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"pricing",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"YAFURNI Working Space 2th Floor\",\r\n    \"description\" : \"Tempat nyaman dan dekat dengan lantai 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"pricing",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-qdljLAFP/rqYiY6Sg78CY52wbMw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 07:44:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pricing berhasil diupdate\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Pricing",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"pricing",
+								"40198421-7f7a-47a9-8615-aac9391d1bad",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/pricing/40198421-7f7a-47a9-8615-aac9391d1bad/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"pricing",
+										"40198421-7f7a-47a9-8615-aac9391d1bad",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-yNkyTZKu8qqQFcLt0MwiraiqEwQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 07:46:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pricing berhasil dihapus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "UseCase",
+			"item": [
+				{
+					"name": "Create UseCase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Tower Co-working Floor 5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Meeting Room",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Bobby/Downloads/room.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"usecases",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Tower Co-working Floor 5",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Meeting Room",
+											"type": "text"
+										},
+										{
+											"key": "capacity",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100000",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Bobby/Downloads/room.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"usecases",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-atluhMIIBPmpLTtcWlJ4N97Z/8g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:09:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Use Case berhasil ditambahkan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update UseCase",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Medan Tower Co-working Floor 5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Meeting Room",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Bobby/Downloads/room.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"usecases",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Medan Tower Co-working Floor 5",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Meeting Room",
+											"type": "text"
+										},
+										{
+											"key": "capacity",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100000",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Bobby/Downloads/room.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"usecases",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-RJm7Lw5e+rAUaSPPLPBOy6y8BbU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:14:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Use Case berhasil diperbarui\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All UseCase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"usecases",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"usecases",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "949"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b5-lkf9gDOoJkMd1senkHHPRija7JQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:10:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Clapham Co-working Floor 5\",\n        \"category\": \"Meeting Room\",\n        \"capacity\": 12,\n        \"price\": 100000,\n        \"image\": \"30fc35f32dce7633888d9212eb5f50ca.jpg\",\n        \"url\": \"http://localhost:3000/images/30fc35f32dce7633888d9212eb5f50ca.jpg\",\n        \"location\": {\n            \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n            \"name\": \"Tower\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Tower Co-working Floor 5\",\n        \"category\": \"Meeting Room\",\n        \"capacity\": 12,\n        \"price\": 100000,\n        \"image\": \"30fc35f32dce7633888d9212eb5f50ca.jpg\",\n        \"url\": \"http://localhost:3000/images/30fc35f32dce7633888d9212eb5f50ca.jpg\",\n        \"location\": {\n            \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n            \"name\": \"Tower\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single UseCase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"usecases",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"usecases",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "474"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1da-hXk7HvZYrf6f19qgLeNW1cOZ740\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:11:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Clapham Co-working Floor 5\",\n    \"category\": \"Meeting Room\",\n    \"capacity\": 12,\n    \"price\": 100000,\n    \"image\": \"30fc35f32dce7633888d9212eb5f50ca.jpg\",\n    \"url\": \"http://localhost:3000/images/30fc35f32dce7633888d9212eb5f50ca.jpg\",\n    \"location\": {\n        \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n        \"name\": \"Tower\",\n        \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete UseCase",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"usecases",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/usecases/aa965d2a-e4ab-4d87-9763-0c108aed49df/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"usecases",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-E4O1yRGJkOttg0e9klqJCVoT/Nk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:16:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Use Case berhasil dihapus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Amenitie",
+			"item": [
+				{
+					"name": "Create Amenitie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amenity\" : \"Pool\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"amenities",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amenity\" : \"Smoking Room\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"amenities",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-uWKZ7NKvrGHX4wUWB9hM1+7kYkA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:26:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Amenitie berhasil ditambahkan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Amentitie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"amenities",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"amenities",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "569"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"239-4JLqYB1O/tp+8xEG6g646KtXuAE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:27:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"amenity\": \"Smoking Room\",\n        \"location\": {\n            \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n            \"name\": \"Tower\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"amenity\": \"Pool\",\n        \"location\": {\n            \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n            \"name\": \"Tower\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Amenitite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"amenities",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"amenities",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "287"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11f-GO4FLdd8k0d0/Vx1PJcutnWelnE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:28:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"amenity\": \"Smoking Room\",\n    \"location\": {\n        \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n        \"name\": \"Tower\",\n        \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Amentitie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amenity\" : \"Smoking Room\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"amenities",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amenity\" : \"Gaming Room\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"amenities",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-3GVvIbhVOyYgxEYSG7gUdYhNsH0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:30:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Amenitie berhasil diupdate\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Amentite",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"amenities",
+								"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/amenities/aa965d2a-e4ab-4d87-9763-0c108aed49df/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"amenities",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-QvNSQs5ei1LJg3xlUeEGcGyGAzU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:31:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Amenitie berhasil dihapus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Rafael\",\r\n    \"phone_number\" : \"0812312221\",\r\n    \"email\" : \"buyyer@email.com\",\r\n    \"company_name\" : \"Veteran Company\",\r\n    \"bookplan\" : \"Meeting\",\r\n    \"capacity\" : 5,\r\n    \"contactby\" : \"Bobby\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/orders/371a2e38-603c-4176-83f1-37ab65ceb777",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"orders",
+								"371a2e38-603c-4176-83f1-37ab65ceb777"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Bobby\",\r\n    \"phone_number\" : \"0812312221\",\r\n    \"email\" : \"buyyer@email.com\",\r\n    \"company_name\" : \"Veteran Company\",\r\n    \"bookplan\" : \"Meeting\",\r\n    \"capacity\" : 5,\r\n    \"contactby\" : \"Bobby\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/orders/aa965d2a-e4ab-4d87-9763-0c108aed49df",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"orders",
+										"aa965d2a-e4ab-4d87-9763-0c108aed49df"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-G2RILcpqANbxRYdf3xvqQhWOhSw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:42:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order berhasil dibuat\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/orders",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/orders",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "852"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"354-va+Kl2v7bMzL4r6r0jmtyd2iI24\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:44:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Bobby\",\n        \"phone_number\": \"0812312221\",\n        \"email\": \"buyyer@email.com\",\n        \"company_name\": \"Veteran Company\",\n        \"bookplan\": \"Meeting\",\n        \"capacity\": \"5\",\n        \"contactby\": \"Bobby\",\n        \"location\": {\n            \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n            \"name\": \"Tower\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Rafael\",\n        \"phone_number\": \"0812312221\",\n        \"email\": \"buyyer@email.com\",\n        \"company_name\": \"Veteran Company\",\n        \"bookplan\": \"Meeting\",\n        \"capacity\": \"5\",\n        \"contactby\": \"Bobby\",\n        \"location\": {\n            \"building_id\": \"371a2e38-603c-4176-83f1-37ab65ceb777\",\n            \"name\": \"MDEAN TOWER\",\n            \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/orders/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/orders/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"orders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "421"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a5-fbsY+/AqcZiUZy5cRWEHBp2FuxU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Bobby\",\n    \"phone_number\": \"0812312221\",\n    \"email\": \"buyyer@email.com\",\n    \"company_name\": \"Veteran Company\",\n    \"bookplan\": \"Meeting\",\n    \"capacity\": \"5\",\n    \"contactby\": \"Bobby\",\n    \"location\": {\n        \"building_id\": \"aa965d2a-e4ab-4d87-9763-0c108aed49df\",\n        \"name\": \"Tower\",\n        \"address\": \"Clapham Co-working & Event Space.\\nRuko Centre Point Medan.\\nJalan Timor Blok G No. III/IV 2nd Floor,\\nGang Buntu, Medan Timur, Medan City,\\nNorth Sumatra 20231\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Sembiring\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/orders/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Sembiring\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/orders/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"orders",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-C8eF6ZkQ3MoTgRE9Zp6GcctGtRk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:46:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order berhasil diupdate\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/orders/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "--SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/orders/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"orders",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-uddDnNeVDHvInsTgnl/T3RwFgIY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 10:47:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order berhasil dihapus\"\n}"
 						}
 					]
 				}

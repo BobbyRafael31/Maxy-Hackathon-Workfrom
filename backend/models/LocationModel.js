@@ -46,21 +46,13 @@ const Locations = db.define('locations', {
         allowNull: true,
     },
 
-    location_url:{
-        type:DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-        }
-    },
-
     image:{
         type:DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            len: [3, 100]
-        }
+    },
+    url: DataTypes.STRING,
+    location_url:{
+        type: DataTypes.STRING,
+        allowNull: true,
     },
 
     userId:{
