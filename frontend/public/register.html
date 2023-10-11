@@ -96,10 +96,44 @@
     >
       <div class="container mx-auto mt-[100px] flex flex-col items-center">
         <h1 class="text-5xl font-semibold my-3">Welcome Back</h1>
-        <p class="text-lg font-semibold">Register</p>
+        <p class="text-lg font-semibold">Login to your Account</p>
 
-        <form class="w-full max-w-sm pt-[100px] grid grid-cols-3">
-          <hr style="padding: 10px" />
+        <form class="w-full max-w-sm pt-[100px] grid grid-cols-2 gap-6">
+          <div class="relative flex py-2 items-center col-span-2">
+            <div class="flex-grow border-t border-gray-400"></div>
+            <div class="flex-grow border-t border-gray-400"></div>
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-full-name"
+            >
+              Enter Your Name
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-full-name"
+              type="text"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-full-name"
+            >
+              Phone Number
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-full-name"
+              type="tel"
+              pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"
+              placeholder="Phone Number "
+            />
+          </div>
+
           <div class="mb-6">
             <label
               class="block text-gray-500 font-bold text-left mb-1 pr-4"
@@ -114,6 +148,22 @@
               placeholder="Email"
             />
           </div>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-full-name"
+            >
+              Address
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-full-name"
+              type="text"
+              placeholder="Email"
+            />
+          </div>
+
           <div class="mb-6">
             <label
               class="block text-gray-500 font-bold text-left mb-1 pr-4"
@@ -125,19 +175,63 @@
               class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               id="inline-password"
               type="password"
-              placeholder="your password"
+              placeholder="Your password"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-password"
+            >
+              Date of Birth
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-password"
+              type="date"
+              placeholder="Birth Date"
             />
           </div>
 
           <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-password"
+            >
+              Confirm Password
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-password"
+              type="password"
+              placeholder="Your password"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-password"
+            >
+              Company Name
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-password"
+              type="text"
+              placeholder="Your Company"
+            />
+          </div>
+
+          <div class="mb-6 col-span-2">
             <button
-              class="shadow bg-green-300 hover:bg-green-500 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded-full"
+              class="shadow bg-green-300 hover:bg-green-500 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded-full w-full"
               type="button"
             >
               Register
             </button>
           </div>
-          <div class="relative flex py-5 items-center">
+          <div class="relative flex py-2 items-center col-span-2">
             <div class="flex-grow border-t border-gray-400"></div>
             <div class="flex-grow border-t border-gray-400"></div>
           </div>
