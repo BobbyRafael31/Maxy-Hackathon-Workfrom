@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="bg-white text-black font-semibold py-4 px-4 fixed top-0 w-full">
+      <div class="container flex justify-between items-center">
+        <a
+          href="https://workfrom.id/"
+          class="text-xl font-bold text-justify pl-60"
+        >
+          <img
+            id="image-262-12"
+            alt=""
+            src="https://workfrom.id/wp-content/uploads/2022/12/Logo-WF.png"
+            class="ct-image"
+            srcset=""
+            sizes="(max-width: 151px) 100vw, 151px"
+          />
+        </a>
+        <ul class="flex space-x-4">
+          <li class="group relative">
+            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
+              Locations
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1 transform group-hover: transition-transform duration-300"
+              >
+                <path d="M10 20l5-5H5l5 5z" />
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
+            >
+              <li><a href="#">Location 1</a></li>
+              <li><a href="#">Location 2</a></li>
+              <!-- Tambahkan item dropdown sesuai kebutuhan -->
+            </ul>
+          </li>
+          <li class="group relative">
+            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
+              Use Case
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1 transform group-hover: transition-transform duration-300"
+              >
+                <path d="M10 20l5-5H5l5 5z" />
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
+            >
+              <li><a href="#">Use Case 1</a></li>
+              <li><a href="#">Use Case 2</a></li>
+              <!-- Tambahkan item dropdown sesuai kebutuhan -->
+            </ul>
+          </li>
+          <li class="group relative">
+            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
+              Blog
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            target="_blank"
+            class="bg-green-300 rounded-full text-black px-4 py-2 hover:bg-green-500"
+            >Contact Us</a
+          >
+
+          <a
+            href="#"
+            target="_blank"
+            class="bg-green-300 rounded-full text-black py-2 px-3 hover:bg-green-500"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- form login -->
+    <div
+      class="bg-black text-white text-center mt-5 pt-[100px] pb-[500px] block"
+    >
+      <div class="container mx-auto mt-[100px] flex flex-col items-center">
+        <h1 class="text-5xl font-semibold my-3">Welcome Back</h1>
+        <p class="text-lg font-semibold">Login to your Account</p>
+
+        <form class="w-full max-w-sm pt-[100px]">
+          <hr style="padding: 10px" />
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-full-name"
+            >
+              Enter Your Email
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-full-name"
+              type="text"
+              placeholder="Email"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-500 font-bold text-left mb-1 pr-4"
+              for="inline-password"
+            >
+              Enter Your Password
+            </label>
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="inline-password"
+              type="password"
+              placeholder="your password"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="text-gray-500 font-bold text-left flex justify-between items-center"
+            >
+              <div>
+                <input class="mr-2 leading-tight" type="checkbox" />
+                <span class="text-sm">Remember Me</span>
+              </div>
+              <span class="text-sm"><a href="#">Forgot Password</a></span>
+            </label>
+          </div>
+
+          <div class="mb-6">
+            <button
+              class="shadow bg-green-300 hover:bg-green-500 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded-full"
+              type="button"
+            >
+              Log In
+            </button>
+          </div>
+          <div class="relative flex py-5 items-center">
+            <div class="flex-grow border-t border-gray-400"></div>
+            <span class="flex-shrink mx-4 text-gray-400">OR</span>
+            <div class="flex-grow border-t border-gray-400"></div>
+          </div>
+
+          <div class="flex justify-between">
+            <div>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 488 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #ffffff;
+                    }
+                  </style>
+                  <path
+                    d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #f0f2f4;
+                    }
+                  </style>
+                  <path
+                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.25em"
+                  viewBox="0 0 448 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #ffffff;
+                    }
+                  </style>
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
