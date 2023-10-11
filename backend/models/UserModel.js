@@ -39,14 +39,14 @@ const Users = db.define('users', {
             notEmpty: true
         }
     },
-
+    
     role:{
         type:DataTypes.STRING,
         allowNull: false,
         validate: {
             notEmpty: true
         }
-    }
+    },
 
 },{
     freezeTableName: true

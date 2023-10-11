@@ -38,17 +38,12 @@ const Locations = db.define('locations', {
         allowNull: false,
         validate: {
             notEmpty: true,
-            len: [3, 100]
         }
     },
 
     description:{
         type:DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            len: [3, 100]
-        }
+        allowNull: true,
     },
 
     location_url:{
@@ -56,7 +51,6 @@ const Locations = db.define('locations', {
         allowNull: false,
         validate: {
             notEmpty: true,
-            len: [3, 100]
         }
     },
 
@@ -71,7 +65,6 @@ const Locations = db.define('locations', {
 
     userId:{
         type:DataTypes.INTEGER,
-        defaultValue: DataTypes.UUIDV4,
         allowNull: false,
         validate: {
             notEmpty: true
