@@ -1,6 +1,6 @@
 # Workform API
 
-API for workfrom hackathon cases.
+API for workfrom hackathon case.
 
 ## How to Run Backend
 
