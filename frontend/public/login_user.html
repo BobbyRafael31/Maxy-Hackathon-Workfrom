@@ -15,10 +15,7 @@
     <!-- navbar -->
     <nav class="bg-white text-black font-semibold py-4 px-4 fixed top-0 w-full">
       <div class="container flex justify-between items-center">
-        <a
-          href="../public/index.html"
-          class="text-xl font-bold text-justify pl-60"
-        >
+        <a href="index.html" class="text-xl font-bold">
           <img
             id="image-262-12"
             alt=""
@@ -28,45 +25,96 @@
             sizes="(max-width: 151px) 100vw, 151px"
           />
         </a>
-        <ul class="flex space-x-4">
+
+        <button
+          id="menu-toggle"
+          class="lg:hidden md:hidden sm:hidden text-3xl p-2 focus:outline-none"
+        >
+          &#9776;
+        </button>
+
+        <ul id="nav-menu" class="lg:flex md:flex sm:flex space-x-4">
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Locations
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-1 transform group-hover: translate-x-1 transition-transform duration-300"
-              >
-                <path d="M10 20l5-5H5l5 5z" />
-              </svg>
+            <a
+              class="hover:bg-slate-300 flex items-center p-2"
+              onclick="toggleDropdown('locations-menu')"
+            >
+              Locations &#9662;
+              <!-- Panah bawah -->
             </a>
             <ul
-              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
+              class="absolute hidden space-y-2 bg-white text-black mt-2 p-5"
+              id="locations-menu"
             >
-              <li><a href="#">Location 1</a></li>
-              <li><a href="#">Location 2</a></li>
-              <!-- Tambahkan item dropdown sesuai kebutuhan -->
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Medan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Jakarta Selatan</a
+                >
+              </li>
             </ul>
           </li>
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Use Case
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-1 transform group-hover: translate-x-1 transition-transform duration-300"
-              >
-                <path d="M10 20l5-5H5l5 5z" />
-              </svg>
+            <a
+              class="hover:bg-slate-300 flex items-center p-2"
+              onclick="toggleDropdown('use-case-menu')"
+            >
+              Use Case &#9662;
+              <!-- Panah bawah -->
             </a>
             <ul
-              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
+              class="absolute hidden space-y-2 bg-white text-black mt-2 p-5"
+              id="use-case-menu"
             >
-              <li><a href="#">Use Case 1</a></li>
-              <li><a href="#">Use Case 2</a></li>
-              <!-- Tambahkan item dropdown sesuai kebutuhan -->
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Event</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Meeting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Photo Shoot</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >video Shoot</a
+                >
+              </li>
             </ul>
           </li>
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
+            <a
+              href="blog.html"
+              class="hover:bg-slate-300 flex items-center p-2"
+            >
               Blog
             </a>
           </li>
@@ -75,14 +123,11 @@
         <div class="flex space-x-4">
           <a
             href="#"
-            target="_blank"
             class="bg-green-300 rounded-full text-black px-4 py-2 hover:bg-green-500"
             >Contact Us</a
           >
-
           <a
-            href="#"
-            target="_blank"
+            href="login_user.html"
             class="bg-green-300 rounded-full text-black py-2 px-3 hover:bg-green-500"
             >Login</a
           >
@@ -151,5 +196,31 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+
+      function toggleDropdown(menuId) {
+        const menu = document.getElementById(menuId);
+        menu.classList.toggle("hidden");
+      }
+
+      window.addEventListener("click", function (event) {
+        document.querySelectorAll(".group").forEach((item) => {
+          const menu = item.querySelector("ul");
+          if (
+            !menu.classList.contains("hidden") &&
+            !item.contains(event.target)
+          ) {
+            menu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
