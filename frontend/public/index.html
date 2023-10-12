@@ -10,12 +10,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="bg-white text-black font-semibold py-4 px-4 fixed top-0 w-full">
       <div class="container flex justify-between items-center">
-        <a href="../public/index.html" class="text-xl font-bold">
+        <a href="index.html" class="text-xl font-bold">
           <img
             id="image-262-12"
             alt=""
@@ -35,29 +37,86 @@
 
         <ul id="nav-menu" class="lg:flex md:flex sm:flex space-x-4">
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Locations
+            <a
+              class="hover:bg-slate-300 flex items-center p-2"
+              onclick="toggleDropdown('locations-menu')"
+            >
+              Locations &#9662;
+              <!-- Panah bawah -->
             </a>
             <ul
-              class="absolute hidden space-y-2 bg-white text-black mt-2 left-0"
+              class="absolute hidden space-y-2 bg-white text-black mt-2 p-5"
+              id="locations-menu"
             >
-              <li><a href="#">Location 1</a></li>
-              <li><a href="#">Location 2</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Medan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Jakarta Selatan</a
+                >
+              </li>
             </ul>
           </li>
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Use Case
+            <a
+              class="hover:bg-slate-300 flex items-center p-2"
+              onclick="toggleDropdown('use-case-menu')"
+            >
+              Use Case &#9662;
+              <!-- Panah bawah -->
             </a>
             <ul
-              class="absolute hidden space-y-2 bg-white text-black mt-2 left-0"
+              class="absolute hidden space-y-2 bg-white text-black mt-2 p-5"
+              id="use-case-menu"
             >
-              <li><a href="#">Use Case 1</a></li>
-              <li><a href="#">Use Case 2</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Event</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Meeting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >Photo Shoot</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:bg-slate-300"
+                  style="white-space: nowrap"
+                  >video Shoot</a
+                >
+              </li>
             </ul>
           </li>
           <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
+            <a
+              href="blog.html"
+              class="hover:bg-slate-300 flex items-center p-2"
+            >
               Blog
             </a>
           </li>
@@ -66,14 +125,11 @@
         <div class="flex space-x-4">
           <a
             href="#"
-            target="_blank"
             class="bg-green-300 rounded-full text-black px-4 py-2 hover:bg-green-500"
             >Contact Us</a
           >
-
           <a
-            href="../public/login_user.html"
-            target="_blank"
+            href="login_user.html"
             class="bg-green-300 rounded-full text-black py-2 px-3 hover:bg-green-500"
             >Login</a
           >
@@ -113,12 +169,6 @@
     </div>
 
     <!--  -->
-    <div class="bg-white text-center py-[300px]">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-      architecto vero alias porro consectetur? Illum labore maiores debitis
-      provident, obcaecati necessitatibus, eveniet, exercitationem repudiandae
-      iste suscipit officia tempora aut? Eum!
-    </div>
 
     <div class="bg-black text-white">
       <div class="container mx-auto text-center py-16">
@@ -536,6 +586,23 @@
 
       menuToggle.addEventListener("click", () => {
         navMenu.classList.toggle("hidden");
+      });
+
+      function toggleDropdown(menuId) {
+        const menu = document.getElementById(menuId);
+        menu.classList.toggle("hidden");
+      }
+
+      window.addEventListener("click", function (event) {
+        document.querySelectorAll(".group").forEach((item) => {
+          const menu = item.querySelector("ul");
+          if (
+            !menu.classList.contains("hidden") &&
+            !item.contains(event.target)
+          ) {
+            menu.classList.add("hidden");
+          }
+        });
       });
     </script>
   </body>
