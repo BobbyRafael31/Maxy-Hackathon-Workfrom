@@ -140,18 +140,20 @@
     <!-- header -->
     <div class="bg-black text-white text-center py-[300px]">
       <div class="container mx-auto grid grid-cols-2 items-center">
-        <div class="text-left">
+        <div class="text-left" data-aos="fade-up">
           <img src="../image/header.png" alt="Gambar Anda" class="mx-auto" />
         </div>
 
         <div class="text-left px-4">
-          <h1 class="text-5xl font-semibold">Office & Coworking Space</h1>
-          <h1 class="text-5xl font-semibold">Temukan Ruangan</h1>
-          <h1 class="text-5xl font-semibold">
-            untuk <span class="text-lime-200">Setiap Pekerjaan</span>
-          </h1>
+          <div class="text-5xl font-semibold" data-aos="fade-left">
+            <h1>Office & Coworking Space</h1>
+            <h1>Temukan Ruangan</h1>
+            <h1 class="text-5xl font-semibold">
+              untuk <span class="text-lime-200">Setiap Pekerjaan</span>
+            </h1>
+          </div>
           <br />
-          <p class="text-xl font-semibold">
+          <p class="text-xl font-semibold" data-aos="fade-left">
             Dengan berbagai pilihan ruangan yang dapat disesuaikan dengan <br />
             kebutuhan Anda, kami akan membantu Anda mencari ruangan kerja <br />
             yang sesuai dengan anggaran dan kebutuhan Anda. Temukan <br />
@@ -159,7 +161,7 @@
           </p>
           <a href="#">
             <button
-              class="rounded-xl text-black font-semibold bg-green-300 py-5 px-20 mt-[100px] mx-60 text-lg hover:bg-green-500"
+              class="rounded-xl text-black font-semibold bg-green-300 py-5 px-20 mt-[100px] mx-60 text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500"
             >
               Book Now
             </button>
@@ -266,6 +268,7 @@
                   class="rounded-t-lg border-solid border-4 border-white"
                   src="../image/card1.png"
                   alt="Hollywood Sign on The Hill"
+                  data-aos="zoom-in"
                 />
               </div>
               <div class="p-2">
@@ -280,7 +283,7 @@
                 </p>
                 <a href="#">
                   <button
-                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg hover:bg-green-500"
+                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500"
                   >
                     Book Now
                   </button>
@@ -299,6 +302,7 @@
                   class="rounded-t-lg border-solid border-4 border-white"
                   src="../image/card2.png"
                   alt="Hollywood Sign on The Hill"
+                  data-aos="zoom-in"
                 />
               </div>
               <div class="p-2">
@@ -313,7 +317,7 @@
                 </p>
                 <a href="#">
                   <button
-                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg hover:bg-green-500"
+                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500"
                   >
                     Book Now
                   </button>
@@ -332,6 +336,7 @@
                   class="rounded-t-lg border-solid border-4 border-white"
                   src="../image/card3.png"
                   alt="Hollywood Sign on The Hill"
+                  data-aos="zoom-in"
                 />
               </div>
               <div class="p-2">
@@ -346,7 +351,7 @@
                 </p>
                 <a href="#">
                   <button
-                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg hover:bg-green-500"
+                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500"
                   >
                     Book Now
                   </button>
@@ -365,6 +370,7 @@
                   class="rounded-t-lg border-solid border-4 border-white"
                   src="../image/card4.png"
                   alt="Hollywood Sign on The Hill"
+                  data-aos="zoom-in"
                 />
               </div>
               <div class="p-2">
@@ -379,7 +385,7 @@
                 </p>
                 <a href="#">
                   <button
-                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg hover:bg-green-500"
+                    class="rounded-none text-black font-semibold bg-green-300 py-2 px-10 mt-2 text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500"
                   >
                     Book Now
                   </button>
@@ -631,7 +637,7 @@
             </h2>
           </div>
 
-          <div class="w-full md:w-1/2">
+          <div data-aos="fade-left" class="w-full md:w-1/2">
             <div id="accordionFlushExample">
               <div
                 class="rounded-none border border-t-0 border-l-0 border-r-0 border-neutral-200"
@@ -880,6 +886,7 @@
     </footer>
 
     <!-- javascript -->
+    <script src="./js/script.js"></script>
     <script>
       const menuToggle = document.getElementById("menu-toggle");
       const navMenu = document.getElementById("nav-menu");
