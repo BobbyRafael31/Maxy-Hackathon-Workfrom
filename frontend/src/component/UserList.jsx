@@ -64,7 +64,7 @@ export const Userlist = () => {
         <ReactPaginate
         pageCount={Math.ceil(users.length / perPage)}
         pageRangeDisplayed={5}
-        marginPagesDisplayed={2}
+        marginPagesDisplayed={2}oo
         previousLabel={'previous'}
         nextLabel={'next'}
         breakLabel={'...'}
