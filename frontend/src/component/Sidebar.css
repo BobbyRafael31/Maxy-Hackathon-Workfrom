@@ -1,0 +1,37 @@
+.sidebar {
+    background-color: #d2fa9a;
+    color: #fff;
+    height: 100%;
+    width: 184px;
+    position: fixed;
+    z-index:1;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin: 0.5rem 0;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #333;
+  }

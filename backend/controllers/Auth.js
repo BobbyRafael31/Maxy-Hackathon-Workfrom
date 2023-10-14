@@ -1,7 +1,7 @@
 import User from "../models/UserModel.js";
 import argon2 from "argon2";
 
-
+//get user login
 export const Login = async (req, res) => {
     const user = await User.findOne({
         where: {
@@ -19,7 +19,7 @@ export const Login = async (req, res) => {
     res.status(200).json({uuid, name, email, role});
 }
 
-//get user login
+//get user that already login to check if user is login or not
 export const Me = async (req, res) => {
     if(!req.session.userId){
         return res.status(401).json({msg : "Mohon login ke akun anda"});
@@ -34,6 +34,7 @@ export const Me = async (req, res) => {
     res.status(200).json(user);
 }
 
+//logout user
 export const Logout = async (req, res) => {
     req.session.destroy((err) => {
         if(err) return res.status(400).json({msg : "Tidak dapat logout"});

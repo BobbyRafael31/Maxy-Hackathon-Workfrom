@@ -2,228 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React Redux App</title>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="bg-white text-black font-semibold py-4 px-4 fixed top-0 w-full">
-      <div class="container flex justify-between items-center">
-        <a
-          href="../public/index.html"
-          class="text-xl font-bold text-justify pl-60"
-        >
-          <img
-            id="image-262-12"
-            alt=""
-            src="https://workfrom.id/wp-content/uploads/2022/12/Logo-WF.png"
-            class="ct-image"
-            srcset=""
-            sizes="(max-width: 151px) 100vw, 151px"
-          />
-        </a>
-        <ul class="flex space-x-4">
-          <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Locations
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-1 transform group-hover: transition-transform duration-300"
-              >
-                <path d="M10 20l5-5H5l5 5z" />
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
-            >
-              <li><a href="#">Location 1</a></li>
-              <li><a href="#">Location 2</a></li>
-              <!-- Tambahkan item dropdown sesuai kebutuhan -->
-            </ul>
-          </li>
-          <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Use Case
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-1 transform group-hover: transition-transform duration-300"
-              >
-                <path d="M10 20l5-5H5l5 5z" />
-              </svg>
-            </a>
-            <ul
-              class="absolute hidden space-y-2 bg-white text-black group-hover:block mt-2 left-0"
-            >
-              <li><a href="#">Use Case 1</a></li>
-              <li><a href="#">Use Case 2</a></li>
-              <!-- Tambahkan item dropdown sesuai kebutuhan -->
-            </ul>
-          </li>
-          <li class="group relative">
-            <a href="#" class="hover:bg-slate-300 flex items-center p-2">
-              Blog
-            </a>
-          </li>
-        </ul>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-        <div class="flex space-x-4">
-          <a
-            href="#"
-            target="_blank"
-            class="bg-green-300 rounded-full text-black px-4 py-2 hover:bg-green-500"
-            >Contact Us</a
-          >
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-          <a
-            href="#"
-            target="_blank"
-            class="bg-green-300 rounded-full text-black py-2 px-3 hover:bg-green-500"
-            >Login</a
-          >
-        </div>
-      </div>
-    </nav>
-
-    <!-- header -->
-    <div class="bg-black text-white text-center py-[300px]">
-      <div class="container mx-auto grid grid-cols-2 items-center">
-        <!-- Kolom Kiri untuk Gambar -->
-        <div class="text-left">
-          <img src="../image/header.png" alt="Gambar Anda" class="mx-auto" />
-        </div>
-
-        <!-- Kolom Kanan untuk Teks -->
-        <div class="text-left px-4">
-          <h1 class="text-5xl font-semibold">Office & Coworking Space</h1>
-          <h1 class="text-5xl font-semibold">Temukan Ruangan</h1>
-          <h1 class="text-5xl font-semibold">
-            untuk <span class="text-lime-200">Setiap Pekerjaan</span>
-          </h1>
-          <br />
-          <p class="text-xl font-semibold">
-            Dengan berbagai pilihan ruangan yang dapat disesuaikan dengan <br />
-            kebutuhan Anda, kami akan membantu Anda mencari ruangan kerja <br />
-            yang sesuai dengan anggaran dan kebutuhan Anda. Temukan <br />
-            ruangan kerja Anda sekarang dan tingkatkan produktivitas kerja Anda!
-          </p>
-          <button
-            class="rounded-xl text-black font-semibold bg-green-300 py-5 px-20 mt-[100px] mx-60 text-lg hover:bg-green-500"
-          >
-            Book Now
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!--  -->
-    <div class="bg-red-500 text-center py-[300px]">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-      architecto vero alias porro consectetur? Illum labore maiores debitis
-      provident, obcaecati necessitatibus, eveniet, exercitationem repudiandae
-      iste suscipit officia tempora aut? Eum!
-    </div>
-
-    <div class="bg-black text-center text-white py-[300px]">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure odit,
-      aliquid incidunt optio aspernatur atque sit maxime voluptatum quos!
-      Suscipit odio consectetur, laboriosam quas iure voluptas iste ad quae
-      fugiat.
-    </div>
-
-    <!-- Footer container -->
-    <footer class="bg-white">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a
-              href="https://workfrom.id/"
-              class="text-xl font-bold text-justify pl-60"
-            >
-              <img
-                id="image-262-12"
-                alt=""
-                src="https://workfrom.id/wp-content/uploads/2022/12/Logo-WF.png"
-                class="ct-image"
-                srcset=""
-                sizes="(max-width: 151px) 100vw, 151px"
-              />
-            </a>
-            <br />
-            <p>
-              Komp. Ruko Centre Point Medan Jalan <br />
-              Timor Blok G No. III/IV 2nd Floor, Gang <br />
-              Buntu, Medan Timur, Medan City, North <br />
-              Sumatra 20231
-              <br /><br />
-              (+6261) 805 109 77
-            </p>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div class="px-5">
-              <h2 class="mb-6 text-sm font-semibold text-black uppercase">
-                Location
-              </h2>
-              <ul class="text-black font-medium">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Clapham</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">The 101</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Yafurni</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Kalingga</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Spasi</a>
-                </li>
-              </ul>
-            </div>
-            <div class="px-5">
-              <h2 class="mb-6 text-sm font-semibold text-black uppercase">
-                Use case
-              </h2>
-              <ul class="text-black font-medium">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Event</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Meeting</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Photo Shoot</a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Office</a>
-                </li>
-              </ul>
-            </div>
-            <div class="px-5">
-              <h2 class="mb-6 text-sm font-semibold text-black uppercase">
-                Company
-              </h2>
-              <ul class="text-black font-medium">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">Blog</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr
-          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
-        />
-      </div>
-    </footer>
-
-    <!-- javascript -->
-    <script></script>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 </html>

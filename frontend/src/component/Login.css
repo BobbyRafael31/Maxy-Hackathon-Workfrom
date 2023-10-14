@@ -1,0 +1,20 @@
+.login-form {
+    width: 360px; /* Change this value to the desired width */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+}
+.bottom{
+    margin-top: 2rem;
+}
+link{
+    color: #d2fa9a;
+}
+  

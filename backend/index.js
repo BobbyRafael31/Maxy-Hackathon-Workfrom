@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 import fileUpload from "express-fileupload";
 import db from "./config/Database.js";
 import SequelizeStore from "connect-session-sequelize";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import UserRoute from "../backend/routes/UserRoute.js";
 import LocationRoute from "../backend/routes/LocationRoute.js";
@@ -15,10 +17,13 @@ import UseCaseRoute from "../backend/routes/UseCaseRoute.js";
 import AmenitieRoute from "../backend/routes/AmenitieRoute.js";
 import OrderRoute from "../backend/routes/OrderRoute.js";
 
-
 dotenv.config();
 
-const PORT = process.env.PORT || 3000
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
+
+const PORT = process.env.PORT || 5000
 
 const app = express();
 
@@ -28,9 +33,10 @@ const store = new sessionStore({
     db: db
 }); 
 
-(async()=>{
-  await db.sync();
-})();
+//(async()=>{
+//  await db.sync();
+//})();
+app.use(express.static(path.join(__dirname, 'src')))
 
 app.use(session({
     secret: process.env.SESS_SECRET,
