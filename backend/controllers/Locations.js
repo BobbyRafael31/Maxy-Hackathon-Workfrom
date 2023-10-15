@@ -167,7 +167,7 @@ export const deleteLocation = async (req, res) => {
         fs.unlinkSync(filePath);
         await Location.destroy({
             where: {
-                id: req.params.id
+                building_id: location.building_id
             }
         })
         res.status(200).json({ message: "Lokasi berhasil di hapus" });
