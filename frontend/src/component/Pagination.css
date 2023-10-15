@@ -1,10 +1,12 @@
 /* Pagination.css */
 .pagination {
-    display: flex;
+    display: inline-block;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-  }
-  
+    margin: 2rem 0;
+    
+  } 
+
   .pagination a {
     padding: 5px 10px;
     margin: 0 5px;

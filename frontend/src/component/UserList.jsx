@@ -60,7 +60,7 @@ export const Userlist = () => {
                 ))}
             </tbody>
         </table>
-        <div>
+        <div className='pagination'>
         <ReactPaginate
         pageCount={Math.ceil(users.length / perPage)}
         pageRangeDisplayed={5}

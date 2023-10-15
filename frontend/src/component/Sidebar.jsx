@@ -26,11 +26,6 @@ export const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard">
-              <IoPerson /> User
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/locations">
               <IoLocation /> Locations
             </NavLink>
@@ -51,11 +46,16 @@ export const Sidebar = () => {
         )}
 
         <ul className="menu-list">
+        <div>
+            <p className="menu-label has-text-weight-bold">Setting</p>
+            <ul className="menu-list has-text-weight-bold">
           <li>
             <button onClick={logout} className="button is-white">
               <IoLogOut /> Logout
             </button>
           </li>
+        </ul>
+        </div>
         </ul>
       </aside>
     </div>

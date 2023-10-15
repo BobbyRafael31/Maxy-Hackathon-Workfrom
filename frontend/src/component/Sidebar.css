@@ -3,7 +3,7 @@
   color: #fff;
   height: 100%;
   width: 184px;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   overflow-y: auto;
 }

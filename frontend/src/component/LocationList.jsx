@@ -63,7 +63,7 @@ export const Locationlist = () => {
           ))}
         </tbody>
       </table>
-      <div>
+      <div className='pagination'>
         <ReactPaginate
           pageCount={Math.ceil(locations.length / perPage)}
           pageRangeDisplayed={5}
