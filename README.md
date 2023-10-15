@@ -1,6 +1,7 @@
 # Workform API
 
-API for workfrom hackathon case.
+API for workfrom hackathon case. In the backend I use Mysql, Express, and Node js.
+In the frontend I use React JS and Bulma for styling
 
 ## How to Run Backend
 
