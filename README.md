@@ -8,7 +8,7 @@ In the project directory, you can run backend server with:
 
 ### `make a new database in phpmyadmin`
 In backend folder, there is an sql file. first you need to make
-a new database with the same name in the backend folder.
+a new database in phpmyadmin with the same name in the backend folder.
 and export that sql file into your database
 
 ### `cd backend`
